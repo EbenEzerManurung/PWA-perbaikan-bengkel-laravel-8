@@ -1,0 +1,166 @@
+.btn-new{
+	background-color: #2449f0;
+	color: #fff;
+}
+
+.btn-new:hover{
+	background-color: #2449f0;
+	color: #fff;
+}
+
+.btn-filter{
+	background-color: #fff;
+	color: #2449f0;
+}
+
+.btn-filter:hover{
+	background-color: #fff;
+	color: #2449f0;
+}
+
+.btn-filter:hover, .btn-new:hover{
+	border: 0px solid #2449f0;
+}
+
+.btn-filter:not( :hover ), .btn-new:not( :hover ){
+	border: 0px solid #2449f0;
+}
+
+.card-noborder{
+	border: 0px;
+}
+
+.b-radius{
+	border-radius: 10px;
+}
+
+.table-responsive{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-custom tbody tr td{
+	color: #3b3b3b;
+	font-weight: bold;
+	padding: 10px 10px;
+}
+
+.table-custom thead tr th{
+	color: #a3a3a3;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.table-custom tbody tr td img{
+	border-radius: 10px !important;
+	width: 45px !important;
+    min-width: 45px !important;
+    height: 45px !important;
+}
+
+.mekanik-span{
+	color: #945b10;
+	font-weight: bold;
+	background-color: rgba(255, 255, 20, 0.61);
+}
+
+.mekanik-span:hover{
+	color: #945b10;
+}
+.admin-span{
+	color: #f51000;
+	font-weight: bold;
+	background-color: rgba(252, 116, 106, 0.87);
+}
+
+.admin-span:hover{
+	color: #d8675f;
+}
+
+
+
+
+
+.user-span{
+	color: #078527;
+	font-weight: bold;
+	background-color: rgba(0, 255, 136, 0.541);
+}
+
+.user-span:hover{
+	color: #ff0000;
+}
+
+.produksi-span{
+	color: #1100ff;
+	font-weight: bold;
+	background-color: rgba(0, 26, 255, 0.2);
+}
+
+.produksi-span:hover{
+	color: #1100ff;
+}
+
+
+
+
+.bg-light-blue{
+	background-color: #2d4fef !important;
+	color: #fff !important;
+}
+
+.close-btn{
+	background-color: #d7d7d7 !important;
+	border-radius: 5px;
+	margin-top: 0px !important;
+	margin-right: 0px !important;
+	padding: 0.2rem 0.7rem !important;
+}
+
+.btn-update{
+	background-color: #2d4fef;
+	color: #fff;
+	font-weight: bold;
+}
+
+.btn-update:hover{
+	color: #fff;
+}
+
+.img-edit{
+	border-radius: 10px;
+	width: 9rem;
+	height: 9rem;
+	object-fit: cover;
+}
+
+.btn-delete-img{
+	border: 1px solid #2196f3;
+	color: #2196f3;
+	font-weight: bold;
+}
+
+.btn-delete-img:hover{
+	color: #2196f3;
+}
+
+.error-notice{
+	margin-top: -5px !important;
+	margin-bottom: -15px !important;
+}
+
+.error-notice label{
+	color: #ff6258;
+	font-size: 12px;
+}
+
+.search-dropdown{
+	width: 300px !important;
+}
+
+.search-dropdown input{
+	margin-left: 15px !important;
+}
