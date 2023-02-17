@@ -2,10 +2,8 @@
 #perbaikan-bengkel-laravel-8
 
 
-
-
 Using HTML,CSS and Javascript
-Toko kecil merupakan sebuah website yang digunakan untuk mengelola perbaikan bengkel. Aplikasi ini dibuat menggunakan Laravel 8 dan minimal PHP 7.4 olehkarena itu jika pada saat proses instalasi terdapat error karena versi dari PHP yang tidak support.
+Perbaikan bengkel merupakan sebuah website yang digunakan untuk mengelola perbaikan bengkel. Aplikasi ini dibuat menggunakan Laravel 8 dan minimal PHP 7.4 olehkarena itu jika pada saat proses instalasi terdapat error karena versi dari PHP yang tidak support.
 
 ### Beberapa Fitur yang tersedia:
 - Kelola akun user & hak akses
