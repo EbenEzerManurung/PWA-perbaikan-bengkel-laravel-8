@@ -12,7 +12,7 @@ class perbaikan extends Model
     protected $foreignKey = 'perintah_id';
 
     protected $fillable = [
-        'nama_mekanik','status', 'perintah_id'
+       'status', 'perintah_id'
     ];
 
 

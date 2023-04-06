@@ -78,6 +78,7 @@ class PemesananController extends Controller
         'no_customer' => 'NO'.sprintf('%04u', pemesanan::count()+1),
         'alamat_customer' => $request->alamat_customer,
         'merk' => $request->merk, 
+        'tgl' => $request->tgl
 
     ]);  
 

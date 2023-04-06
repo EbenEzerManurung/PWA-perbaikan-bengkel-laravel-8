@@ -15,7 +15,6 @@ class CreatePerbaikansTable extends Migration
     {
         Schema::create('perbaikan', function (Blueprint $table) {
             $table->id('id_perbaikan');
-            $table->string('nama_mekanik');
             $table->enum('status', ['process', 'finished'])->default('process');;
             $table->foreignId('perintah_id');
              $table->foreign('perintah_id')->references('id_perintah')->on('perintah_perbaikan');

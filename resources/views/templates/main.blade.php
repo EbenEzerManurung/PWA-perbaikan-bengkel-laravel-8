@@ -187,11 +187,37 @@
               </a>
             </li>
             @endif
-           
-           
 
-          
-              
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url('/laporan_perbaikan') }}">
+                <span class="menu-title">Laporan Perbaikan</span>
+              </a>
+            </li>
+            @php
+            $access = \App\Acces::where('user', auth()->user()->id)
+            ->first();
+            @endphp
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url('/chart') }}">
+                <span class="menu-title">High Chart</span>
+              </a>
+            </li>
+            @php
+            $access = \App\Acces::where('user', auth()->user()->id)
+            ->first();
+            @endphp
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url('/logout') }}">
+                <span class="menu-title">Logout</span>
+              </a>
+            </li>
+            @php
+            $access = \App\Acces::where('user', auth()->user()->id)
+            ->first();
+            @endphp
+           
 
 
           </ul>

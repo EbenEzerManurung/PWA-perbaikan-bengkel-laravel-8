@@ -17,7 +17,10 @@
 
   
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-
+<!-- PWA  -->
+<meta name="theme-color" content="#55e3e6"/>
+<link rel="apple-touch-icon" href="{{ asset('bengkel.jpg') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
 
 <!-- AKHIR STYLE CSS -->
 
@@ -29,14 +32,7 @@
 
 </head>
 
-    <!-- AKHIR STYLE CSS -->
-@extends('templates/main')
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/dashboard/style.css') }}">
-@endsection
-@section('content')
-
-</head>
+   
 
     @if ($message = Session::get('succes'))
     <div class="alert alert-success">
@@ -64,7 +60,6 @@
                 <tr>
                  <th>No</th>
                  <th>Nama Mekanik</th>
-                <th>QTY</th>
                 <th>No Customer</th>
                 <th>Status</th>
               
@@ -76,7 +71,6 @@
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $perintah->nama_mekanik }}</td>
-            <td>{{ $perintah->qty }}</td>
             <td>{{ $perintah->pemesanan->no_customer }}</td>
             <td>{{ $perintah->status }}</td>
 
@@ -107,6 +101,14 @@
         <!-- AKHIR TABLE -->
 
 </table>
+<script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 <br>
 {!! $perintah_perbaikan->links() !!}
 

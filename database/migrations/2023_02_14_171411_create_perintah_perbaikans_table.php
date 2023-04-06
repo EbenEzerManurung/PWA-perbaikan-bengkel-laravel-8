@@ -16,7 +16,6 @@ class CreatePerintahPerbaikansTable extends Migration
         Schema::create('perintah_perbaikan', function (Blueprint $table) {
             $table->id('id_perintah');
             $table->string('nama_mekanik');
-             $table->integer('qty');
              $table->foreignId('pemesanan_id');
              $table->foreign('pemesanan_id')->references('id_pemesanan')->on('pemesanan');
              $table->enum('status', ['waiting', 'confirmed'])->default('waiting');;

@@ -1,6 +1,11 @@
 @extends('perbaikan.template')
 
 @section('content')
+<!-- PWA  -->
+<meta name="theme-color" content="#55e3e6"/>
+<link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
+
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
@@ -28,17 +33,17 @@
         @method('PUT')
 
         <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <!-- <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nama Mekanik:</strong>
                 <input type="text" name="nama_mekanik" class="form-control" placeholder="nama mekanik" value="{{ $perbaikan->nama_mekanik }}">
             </div>
-        </div>
+        </div> -->
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>qty:</strong>
-                <input type="number" name="qty" value="{{ $perbaikan->perintah->qty}}" class="form-control" placeholder="qty">
+                <strong>Nama Mekanik:</strong>
+                <input type="text" name="nama_mekanik" value="{{ $perbaikan->perintah->nama_mekanik}}" class="form-control" placeholder="Nama Mekanik">
             </div>
         </div>
 
@@ -64,4 +69,12 @@
     </div>
 
     </form>
+    <script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 @endsection
