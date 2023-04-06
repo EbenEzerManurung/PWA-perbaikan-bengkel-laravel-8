@@ -1,6 +1,10 @@
 @extends('templates/main')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/manage_account/new_account/style.css') }}">
+<!-- PWA  -->
+<meta name="theme-color" content="#55e3e6"/>
+<link rel="apple-touch-icon" href="{{ asset('bengkel.jpg') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
 
 @endsection
 @section('content')
@@ -20,13 +24,13 @@
 	<div class="col-12">
 		<div class="card card-noborder b-radius">
 			<div class="card-body">
-				<form action="{{ url('account/create') }}" method="post" name="create_form" enctype="multipart/form-data">
-				  @csrf
-				  <div class="form-group row">
-				    <label class="col-12 font-weight-bold col-form-label">Foto Profil</label>
-				    <div class="col-12 d-flex flex-row align-items-center mt-2 mb-2">
-				    	<img src="{{ asset('pictures/default.png') }}" class="default-img mr-4" id="preview-foto">
-				    	<div class="btn-action">
+	<form action="{{ url('account/create') }}" method="post" name="create_form" enctype="multipart/form-data">
+			  @csrf
+		  <div class="form-group row">
+	    <label class="col-12 font-weight-bold col-form-label">Foto Profil</label>
+	    <div class="col-12 d-flex flex-row align-items-center mt-2 mb-2">
+	<img src="{{ asset('pictures/default.png') }}" class="default-img mr-4" id="preview-foto">
+				<div class="btn-action">
 				    		<input type="file" name="foto" id="foto" hidden="">
 				    		<button class="btn btn-sm upload-btn mr-1" type="button">Upload Foto</button>
 				    		<button class="btn btn-sm delete-btn" type="button">Hapus</button>
@@ -116,5 +120,13 @@
 	$(document).on('click', '.delete-btn', function(){
 		$("#preview-foto").attr("src", "{{ asset('pictures') }}/default.png");
 	});
+</script>
+<script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
 </script>
 @endsection

@@ -19,6 +19,8 @@ class spare_partController extends Controller
         
     }
 
+    
+
 
     public function index()
     {

@@ -1,6 +1,11 @@
 @extends('perintah_perbaikan.template')
 
 @section('content')
+<!-- PWA  -->
+<meta name="theme-color" content="#55e3e6"/>
+<link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
+
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
@@ -34,12 +39,7 @@
                 <input type="text" name="nama_mekanik" class="form-control" placeholder="Nama mekanik" value="{{ $perintah_perbaikan->nama_mekanik }}">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>qty:</strong>
-                <input type="number" name="qty" value="{{ $perintah_perbaikan->qty}}" class="form-control" placeholder="qty">
-            </div>
-        </div>
+        
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
@@ -56,4 +56,12 @@
     </div>
 
     </form>
+    <script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 @endsection

@@ -56,7 +56,7 @@ class PerbaikanController extends Controller
         
         $request->validate([
             
-            'nama_mekanik' => 'required',
+     
             'perintah_id' => 'required',
             
         
@@ -101,7 +101,6 @@ class PerbaikanController extends Controller
     public function update(Request $request, perbaikan $perbaikan)
     {
         $request->validate([
-            'nama_mekanik' => 'required',
           
             'status' => 'required',
             

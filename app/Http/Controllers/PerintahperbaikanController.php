@@ -53,9 +53,8 @@ class PerintahperbaikanController extends Controller
         //
         
         $request->validate([
-            'nama_mekanik' => 'required',
             'pemesanan_id' => 'required',
-            'qty' => 'required',
+      
         
         
 
@@ -100,7 +99,6 @@ class PerintahperbaikanController extends Controller
         $request->validate([
             'nama_mekanik' => 'required',
             // 'pemesanan_id' => 'required',
-            'qty' => 'required',
             'status' => 'required'
             
         ]);

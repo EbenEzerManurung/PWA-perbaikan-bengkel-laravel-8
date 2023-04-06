@@ -50,12 +50,7 @@
          
         <p>
             
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>qty:</strong>
-                <input type="number" name="qty" class="form-control" placeholder="qty">
-            </div>
-        </div>
+       
        
         <p>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

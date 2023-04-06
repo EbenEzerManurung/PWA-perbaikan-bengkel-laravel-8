@@ -1,6 +1,11 @@
 @extends('pemesanan.template')
 
 @section('content')
+<!-- PWA  -->
+<meta name="theme-color" content="#55e3e6"/>
+<link rel="apple-touch-icon" href="{{ asset('bengkel.jpg') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
+
 <div class="row mt-5 mb-5">
     <div class="col-lg-12 margin-tb">
         <div class="float-left">
@@ -69,6 +74,14 @@
                 <input type="text" name="merk" class="form-control" placeholder="Merk">
             </div>
         </div>
+        <p>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                        <label for="tgl"><strong>Tanggal pemesanan:</strong></label>
+                        <input type="date" id="tgl" name="tgl" class="form-control @error('tgl') is-invalid @enderror">
+                    </div>
+                    </div>
+
 
 <p>
        
@@ -78,5 +91,13 @@
     </div>
 
 </form>
+<script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 @endsection
 

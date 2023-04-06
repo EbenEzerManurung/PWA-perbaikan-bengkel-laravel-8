@@ -1,6 +1,11 @@
 @extends('pemesanan.template')
 
 @section('content')
+<!-- PWA  -->
+<meta name="theme-color" content="#55e3e6"/>
+<link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
+
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
@@ -103,7 +108,19 @@
                                 </div>
                             </div>
                             </div>
-
+                            <div class="form-group row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>status:</strong>
+              <select class="form-control" name="status">
+                <option value="waiting">process</option> 
+                <option value="confirmed">finished</option>
+               
+      
+              </select>
+            </div>
+          </div>
+      </div>
                    
         <p>
             <br>
@@ -119,4 +136,12 @@
     
 
     </form>
+    <script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 @endsection

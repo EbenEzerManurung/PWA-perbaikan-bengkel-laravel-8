@@ -17,7 +17,10 @@
 
   
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
-
+<!-- PWA  -->
+<meta name="theme-color" content="#55e3e6"/>
+<link rel="apple-touch-icon" href="{{ asset('bengkel.jpg') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
 
 <!-- AKHIR STYLE CSS -->
 
@@ -97,6 +100,14 @@
         <!-- AKHIR TABLE -->
 
 </table>
+<script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 <br>
 {!! $survey->links() !!}
 

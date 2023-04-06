@@ -1,0 +1,17 @@
+{
+    "name": "Sistem Informasi Bengkel",
+    "short_name": "LPT",
+    "start_url": "/index.php",
+    "background_color": "#55e3e6",
+    "description": "Tutorial of Laravel Package",
+    "display": "fullscreen",
+    "theme_color": "#55e3e6",
+    "icons": [
+        {
+            "src": "bengkel.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

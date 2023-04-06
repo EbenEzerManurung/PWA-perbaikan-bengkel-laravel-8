@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\HomeController;
 
+use App\Http\Controllers\ChartController;
+
+
 
 
 use App\Http\Controllers\{
@@ -43,6 +46,8 @@ Route::resource('spare_part', spare_partController::class);
 Route::resource('pemesanan', PemesananController::class);
 Route::get('/pemesanan_create', 'PemesananController@home');
 
+
+
 //route perintah perbaikan
 Route::resource('perintah_perbaikan', PerintahperbaikanController::class);
 Route::get('/perintah_create', 'PerintahperbaikanController@home');
@@ -53,6 +58,15 @@ Route::get('/perbaikan_create', 'PerbaikanController@home');
 //route survey
 Route::resource('survey', SurveyController::class);
 Route::get('/survey_create', 'SurveyController@home');
+
+Route::resource('chart', ChartController::class);
+Route::get('chart', [ChartController::class, 'index']);
+
+
+ //laporan perbaikan
+ Route::resource('laporan_perbaikan',  LaporanperbaiknController::class);
+ Route::get('/cetak','LaporanperbaiknController@PrintAll')->name('PrintAll'); 
+
 
 
 

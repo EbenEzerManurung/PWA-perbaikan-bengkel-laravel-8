@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use App\User;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        // User::factory(10)->create();
+        // $this->call(Spare_partSeeder::class);
+  
     }
 }

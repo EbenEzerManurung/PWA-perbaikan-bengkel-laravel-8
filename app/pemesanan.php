@@ -15,7 +15,7 @@ class pemesanan extends Model
     protected $foreignKey = 'spare_part_id';
 
     protected $fillable = [
-        'no_polis','nama_customer','no_customer','alamat_customer','merk','status', 'spare_part_id'
+        'no_polis','nama_customer','no_customer','alamat_customer','merk','status', 'spare_part_id', 'tgl'
     ];
 
 
@@ -27,7 +27,7 @@ class pemesanan extends Model
     
     public function data_perintahperbaikan()
     {
-        return $this->hasMany('App\perintah_perbaikan', 'pemesanan_id');
+        return $this->belongsTo('App\perintah_perbaikan', 'spare_part_id');
     }
 
 }

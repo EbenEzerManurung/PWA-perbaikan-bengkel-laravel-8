@@ -1,6 +1,11 @@
 @extends('survey.template')
 
 @section('content')
+<!-- PWA  -->
+<meta name="theme-color" content="#55e3e6"/>
+<link rel="apple-touch-icon" href="{{ asset('bengkel.jpg') }}">
+<link rel="manifest" href="{{ asset('/manifest.json') }}">
+
     <div class="row mt-5 mb-5">
         <div class="col-lg-12 margin-tb">
             <div class="float-left">
@@ -75,6 +80,13 @@
             <button type="submit" class="btn btn-primary">Update</button>
         </div>
     </div>
-
+    <script src="{{ asset('/sw.js') }}"></script>
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
     </form>
 @endsection

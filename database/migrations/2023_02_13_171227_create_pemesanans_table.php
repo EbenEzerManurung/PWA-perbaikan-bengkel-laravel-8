@@ -20,6 +20,7 @@ class CreatePemesanansTable extends Migration
             $table->string('nama_customer');
             $table->string('alamat_customer');
             $table->string('no_customer');
+            $table->date('tgl');
              $table->foreignId('spare_part_id');
              $table->foreign('spare_part_id')->references('id_spare_part')->on('spare_part');
              $table->enum('status', ['waiting','confirmed' ])->default('waiting');
