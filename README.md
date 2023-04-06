@@ -94,7 +94,6 @@ php artisan serve
 ## PWA
 
 ![App Screenshot](https://github.com/EbenEzerManurung/perbaikan-bengkel-laravel-8/blob/main/screenshot/pwa.JPG?raw=true)
-raw=true)
 
 
 
