@@ -1,5 +1,5 @@
 
-#perbaikan-bengkel-laravel-8
+##PWA perbaikan-bengkel-laravel-8
 
 Using HTML,CSS and Javascript
 
@@ -90,6 +90,11 @@ php artisan serve
 ## create survey
 
 ![App Screenshot](https://github.com/EbenEzerManurung/perbaikan-bengkel-laravel-8/blob/main/screenshot/survey.PNG?raw=true)
+
+## PWA
+
+![App Screenshot](https://github.com/EbenEzerManurung/perbaikan-bengkel-laravel-8/blob/main/screenshot/pwa.JPG?raw=true)
+raw=true)
 
 
 
